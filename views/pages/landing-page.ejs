@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Cool Landing Page</title>
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:500,700,800" type="text/css">
+  <link rel="stylesheet" href="/css/bootstrap.custom.css">
+  <link rel="stylesheet" href="/css/slick.css">
+  <link rel="stylesheet" href="/css/slick-theme.css">
+  <link rel="icon" type="image/gif" href="/favicon.gif">
+</head>
+
+<body>
+  <div class="page-global" ng-controller="Search">
+    <div class="container-fluid">
+      <div class="row">
+        <header class="col-md-10 col-md-offset-1 clearfix">
+          <a href="https://fr.hired.com/?utm_source=techtalent&utm_medium=referral"><img src="https://cdn.breaz.io/img/logos/breaz-by-hired.png"/></a>
+          <div class="lang">
+            <a href="/en" class="current">EN</a>
+            |
+            <a href="/fr" >FR</a>
+          </div>
+        </header>
+        <div class="col-sm-12 claim clearfix">
+          <h2>Find out the demand for your profile in real time</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 jobs clearfix">
+
+          <ul class="col-sm-12">
+            <li class="tag" ng-repeat="job in jobs | orderBy:type" ng-class="{selected: job.id==selected}"  ng-click="select(job.id)">
+              {{ job.name }}
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="results clearfix" id="res">
+          <div class="col-md-2 col-sm-4 col-md-offset-1">
+            <p class="n"><span id="c1">-</span></p>
+            <p> interviews requested on average in the last 7 days</p>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <p class="n"><span id="c2J">-</span>k€</p>
+            <p> average <u>minimum</u> yearly salary of a junior profile (0-2 years of experience)</p>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <p class="n"><span id="c2S">-</span>k€</p>
+            <p> average <u>minimum</u> yearly salary of a senior profile</p>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <p class="n"><span id="c3">-</span>%</p>
+            <p> job offers with stock-options</p>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <p class="n"><span id="c4">-</span></p>
+            <p> companies interested in this profile amongst 500+</p>
+          </div>
+        </div>
+
+        <div class="col-sm-10 col-sm-offset-1 kicker clearfix">
+          <p>
+            <a class="btn btn-hired btn-lg" target="_blank" href="https://fr.hired.com/?utm_source=techtalent&utm_medium=referral">Discover HIRED</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 clearfix">
+          <p class="text-center share-buttons">
+            <a href="http://www.facebook.com/share.php?u=https://techtalent.io" target="_blank"><img src="https://cdn.breaz.io/img/share/facebook.png" alt="Facebook" /></a>
+            <a href="http://twitter.com/home?status=How many tech companies could make you an offer today? https://techtalent.io Find out now with @hired_fr real time data" target="_blank"><img src="https://cdn.breaz.io/img/share/twitter.png" alt="Twitter" /></a>
+            <!-- Google+ -->
+            <a href="https://plus.google.com/share?url=https://techtalent.io" target="_blank"><img src="https://cdn.breaz.io/img/share/google.png" alt="Google" /></a>
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://techtalent.io&title=How many tech companies could make you an offer today? http://techtalent.io Find out now with @hired_fr real time data" target="_blank"><img src="https://cdn.breaz.io/img/share/linkedin.png" alt="LinkedIn" /></a>
+          </p>
+          <p class="explain">Statistics on the last 30 days on hired.com in Paris. Only tech companies developing their own product are accepted on HIRED.</p>
+        </div>
+        <div class="slider col-sm-10 col-sm-offset-1">
+          <img src="/img/slideshow/ab-tasty.png" alt>
+          <img src="/img/slideshow/algolia.png" alt>
+          <img src="/img/slideshow/birchbox.png" alt>
+          <img src="/img/slideshow/blablacar.png" alt>
+          <img src="/img/slideshow/canal.png" alt>
+          <img src="/img/slideshow/chauffeur-prive.png" alt>
+          <img src="/img/slideshow/dashlane.png" alt>
+          <img src="/img/slideshow/djump.png" alt>
+          <img src="/img/slideshow/lengow.png" alt>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 text-center">
+            TechTalent by HIRED &copy; 2016
+            <a href="https://fr.hired.com/?utm_source=techtalent&utm_medium=referral" target="_blank" class="ct-jobseeker">Go to hired.com</a>
+            <script>!function (d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+              }
+            }(document, "script", "twitter-wjs");</script>
+            <a href="https://twitter.com/intent/user?screen_name=hired_fr">
+              <img src="https://cdn.breaz.io/img/footer/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://www.facebook.com/breazio" target="_blank">
+              <img src="https://cdn.breaz.io/img/footer/facebook.png" alt="Facebook">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+  <script src="https://cdn.breaz.io/js/library/jquery-2.1.1.min.js"></script>
+  <script src="https://cdn.breaz.io/js/library/loading-bar-0.6.min.js"></script>
+  <script src="https://cdn.breaz.io/js/library/slick-1.4.1.min.js"></script>
+  <script src="https://cdn.breaz.io/js/library/jquery.animateNumber-0.1.min.js"></script>
+  <script src="/js/smoothscroll.min.js"></script>
+
+  <script>
+
+  $(document).ready(function(){
+    $('.slider').slick({
+      infinite: true,
+      speed: 1500,
+      autoplay: true,
+      autoplaySpeed: 3500,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            speed: 500,
+            autoplaySpeed: 1000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            lazyLoad: 'ondemand'
+          }
+        }
+      ]
+    });
+  });
+  </script>
+  <script>
+  function Search($scope, $http, $location, $document) {
+    $scope.jobsAll = [{"id":1,"name":"Android","type":0},{"id":20,"name":"Scala","type":0},{"id":12,"name":"DevOps","type":0},{"id":10,"name":"C/C++","type":0},{"id":9,"name":"Ruby","type":0},{"id":8,"name":"PHP","type":0},{"id":7,"name":"Java","type":0},{"id":2,"name":"JS Backend","type":0},{"id":3,"name":"JS Frontend","type":0},{"id":4,"name":"Python","type":0},{"id":5,"name":"iOS","type":0},{"id":6,"name":".NET","type":0},{"id":13,"name":"Data Scientist","type":1},{"id":15,"name":"UX/UI Designer","type":1},{"id":14,"name":"Product Manager","type":1}];
+    $scope.jobsLive = [{"jtid":"1"},{"jtid":"2"},{"jtid":"3"},{"jtid":"4"},{"jtid":"5"},{"jtid":"6"},{"jtid":"7"},{"jtid":"8"},{"jtid":"9"},{"jtid":"10"},{"jtid":"12"},{"jtid":"13"},{"jtid":"14"},{"jtid":"19"},{"jtid":"20"},{"jtid":"22"},{"jtid":"23"},{"jtid":"24"},{"jtid":"31"}];
+    $scope.jobs = [];
+    $scope.selected = 0;
+    $scope.email = '';
+
+    var techno = $location.url();
+    if(techno!='') {
+      techno=decodeURIComponent(techno.substr(1,techno.length));
+    }
+
+    _.each($scope.jobsAll, function(j){
+      tmp = _.find($scope.jobsLive, function(jl){
+        if(jl.jtid == j.id) return true;
+      });
+      if(tmp) {
+        if(j.name == techno) {
+          search(j.id);
+          $scope.selected = j.id;
+        }
+        $scope.jobs.push(j);
+      }
+    });
+
+
+    $scope.select = function(id) {
+      $scope.selected = id;
+      search(id);
+    }
+
+    $scope.subscribe = function() {
+      $http({
+        method: 'POST',
+        url: '/subscribe',
+        data: 'email='+$scope.email,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      }).success(function (data) {
+        $("#subscribe").replaceWith('<div>Thank you! </div>');
+      });
+    }
+
+    function search(id) {
+      $http({
+        method: 'POST',
+        url: '/search',
+        data: 'jobId='+id,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      }).success(function (data) {
+        $location.path(data.results.name, false);
+        var options = {duration:1000, animateOpacity: false, floatStepDecimals:0, floatEndDecimals:0};
+        if(id!=0) {
+          $("#c1").animateNumber(data.results.count, options);
+          if(!isNaN(data.results.salaryJ)) $("#c2J").animateNumber(data.results.salaryJ, options);
+          else $("#c2J").html(data.results.salaryJ);
+          if(!isNaN(data.results.salaryS)) $("#c2S").animateNumber(data.results.salaryS, options);
+          else $("#c2S").html(data.results.salaryS);
+          $("#c3").animateNumber(data.results.equity, options);
+          $("#c4").animateNumber(data.results.companies, options);
+          var results = angular.element(document.getElementById('res'));
+          $document.scrollToElement(results, 0, 1000);
+        }
+      });
+    }
+  }
+  </script>
+</body>
+</html>
